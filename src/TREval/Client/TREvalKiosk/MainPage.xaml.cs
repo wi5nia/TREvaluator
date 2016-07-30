@@ -107,14 +107,14 @@ namespace TREvalKiosk
                     hapinessRatio.Text = Core.GetEmotionMessage(result);
                     previewImage.Visibility = Visibility.Visible;
                     // Commit to DB
-                    SessionEval item = new TRMobEval.SessionEval
-                    {
-                        Id = Guid.NewGuid().ToString(),
-                        SessionName = "TrDemoSession",
-                        SessionScore = result,
-                        ScoreDateString = DateTime.Now.ToString()
-                    };
-                    await App.MobileService.GetTable<SessionEval>().InsertAsync(item);
+                    //SessionEval item = new TRMobEval.SessionEval
+                    //{
+                    //    Id = Guid.NewGuid().ToString(),
+                    //    SessionName = "TrDemoSession",
+                    //    SessionScore = result,
+                    //    ScoreDateString = DateTime.Now.ToString()
+                    //};
+                    //await App.MobileService.GetTable<SessionEval>().InsertAsync(item);
                 }
                 catch (Exception ex)
                 {
