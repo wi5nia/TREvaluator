@@ -29,14 +29,14 @@
     <None Include="Deployment.targets">
       <Visible>False</Visible>
     </None>
-    <None Include="Scripts\Add-AppServiceSlot.ps1" />
-    <None Include="Scripts\Add-KeyVaultSecret.ps1" />
-    <None Include="Scripts\Swap-AppServiceSlot.ps1" />
-    <None Include="Scripts\Test-AzureRGKeyVault.ps1" />
-    <None Include="Templates\AppService.json" />
-    <None Include="Templates\AppService.parameters.json" />
-    <None Include="Templates\KeyVault.json" />
-    <None Include="Templates\KeyVault.parameters.json" />
+    <Content Include="Scripts\Add-AppServiceSlot.ps1" />
+    <Content Include="Scripts\Add-KeyVaultSecret.ps1" />
+    <Content Include="Scripts\Swap-AppServiceSlot.ps1" />
+    <Content Include="Scripts\Test-AzureRGKeyVault.ps1" />
+    <Content Include="Templates\AppService.json" />
+    <Content Include="Templates\AppService.parameters.json" />
+    <Content Include="Templates\KeyVault.json" />
+    <Content Include="Templates\KeyVault.parameters.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
