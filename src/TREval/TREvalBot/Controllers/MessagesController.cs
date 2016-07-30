@@ -52,7 +52,7 @@ namespace TREvalBot
                 reply.Attachments = new List<Attachment>();
                 //reply.Attachments.Add(new Attachment()
                 //{
-                //    ContentUrl = "http://ledgeviewpartners.com/wp-content/uploads/2015/06/Power-BI-10.png",
+                //    ContentUrl = "https://devtw.blob.core.windows.net/images/powerbi.png",
                 //    ContentType = "image/png",
                 //    Name = "Power-BI-10.png"
                 //});
@@ -65,7 +65,7 @@ namespace TREvalBot
                         {
                             new CardImage
                             {
-                                Url = "http://ledgeviewpartners.com/wp-content/uploads/2015/06/Power-BI-10.png"
+                                Url = "https://devtw.blob.core.windows.net/images/powerbi.png"
                             }
                         }
                     }.ToAttachment()
