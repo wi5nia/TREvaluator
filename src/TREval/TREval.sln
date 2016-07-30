@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TREvalKiosk", "Client\TREva
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TREvalBot", "TREvalBot\TREvalBot.csproj", "{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}"
 EndProject
+<<<<<<< HEAD
+=======
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProject", "..\..\..\EpicTrApp\source\SharedProject\SharedProject.shproj", "{B71AA219-E266-4B64-90B6-D762CF69A7FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrEvalData", "TrEvalData\TrEvalData.csproj", "{12CED428-22EF-40EC-81F8-4B75B7B5B235}"
+EndProject
+>>>>>>> origin/dev
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\..\..\EpicTrApp\source\SharedProject\SharedProject.projitems*{9f6b9c1b-7311-4a78-80bd-ae4482911825}*SharedItemsImports = 4
@@ -58,6 +65,22 @@ Global
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x64.Build.0 = Release|Any CPU
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x86.ActiveCfg = Release|Any CPU
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x86.Build.0 = Release|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Debug|ARM.Build.0 = Debug|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Debug|x64.Build.0 = Debug|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Debug|x86.Build.0 = Debug|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Release|ARM.ActiveCfg = Release|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Release|ARM.Build.0 = Release|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Release|x64.ActiveCfg = Release|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Release|x64.Build.0 = Release|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Release|x86.ActiveCfg = Release|Any CPU
+		{12CED428-22EF-40EC-81F8-4B75B7B5B235}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

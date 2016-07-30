@@ -20,6 +20,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using SharedProject;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace TREvalKiosk
@@ -97,7 +98,7 @@ namespace TREvalKiosk
             if (_isCaptureMode == true)
             {
                 await ImageCaptureAndDisplay();
-
+                
                 try
                 {
                     float result = await Core.GetAvgEmotionScore(await _file.OpenStreamForReadAsync());
