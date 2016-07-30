@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TREvalKiosk", "Client\TREvalKiosk\TREvalKiosk.csproj", "{9F6B9C1B-7311-4A78-80BD-AE4482911825}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TREvalBot", "TREvalBot\TREvalBot.csproj", "{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}"
+EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProject", "..\..\..\EpicTrApp\source\SharedProject\SharedProject.shproj", "{B71AA219-E266-4B64-90B6-D762CF69A7FA}"
 EndProject
 Global
@@ -13,14 +15,17 @@ Global
 		..\..\..\EpicTrApp\source\SharedProject\SharedProject.projitems*{b71aa219-e266-4b64-90b6-d762cf69a7fa}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|ARM = Release|ARM
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Debug|ARM.ActiveCfg = Debug|ARM
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Debug|ARM.Build.0 = Debug|ARM
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -30,6 +35,7 @@ Global
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Debug|x86.ActiveCfg = Debug|x86
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Debug|x86.Build.0 = Debug|x86
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Debug|x86.Deploy.0 = Debug|x86
+		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Release|Any CPU.ActiveCfg = Release|x86
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Release|ARM.ActiveCfg = Release|ARM
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Release|ARM.Build.0 = Release|ARM
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Release|ARM.Deploy.0 = Release|ARM
@@ -39,6 +45,22 @@ Global
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Release|x86.ActiveCfg = Release|x86
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Release|x86.Build.0 = Release|x86
 		{9F6B9C1B-7311-4A78-80BD-AE4482911825}.Release|x86.Deploy.0 = Release|x86
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|ARM.Build.0 = Debug|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|x64.Build.0 = Debug|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|x86.Build.0 = Debug|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|ARM.ActiveCfg = Release|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|ARM.Build.0 = Release|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x64.ActiveCfg = Release|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x64.Build.0 = Release|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x86.ActiveCfg = Release|Any CPU
+		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
