@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace TREvalBot
 {
@@ -25,8 +26,51 @@ namespace TREvalBot
                 // calculate something for us to return
                 int length = (activity.Text ?? string.Empty).Length;
 
+                //Activity reply = activity.CreateReply();
+
                 // return our reply to the user
-                Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                //Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                //activity.Attachments.Add(new Attachment()
+                //{
+                //    ContentUrl = "http://ledgeviewpartners.com/wp-content/uploads/2015/06/Power-BI-10.png",
+                //    ContentType = "image/png",
+                //    Name = "Chart"
+                //});
+                //activity.Text = "This is a chart for you";
+                //Activity reply = activity.CreateReply("How can I help you?");
+
+                //activity.Attachments.Add(new Attachment()
+                //{
+                //    ContentUrl = "http://ledgeviewpartners.com/wp-content/uploads/2015/06/Power-BI-10.png",
+                //    ContentType = "image/png",
+                //    Name = "Power-BI-10.png"
+                //});
+
+
+                Activity reply = activity.CreateReply();
+                reply.Text = "TechReady 23 session evaluation";
+                reply.Attachments = new List<Attachment>();
+                //reply.Attachments.Add(new Attachment()
+                //{
+                //    ContentUrl = "http://ledgeviewpartners.com/wp-content/uploads/2015/06/Power-BI-10.png",
+                //    ContentType = "image/png",
+                //    Name = "Power-BI-10.png"
+                //});
+
+                reply.Attachments.Add(
+                    new HeroCard
+                    {
+                        Title = "Your report",
+                        Images = new List<CardImage>
+                        {
+                            new CardImage
+                            {
+                                Url = "http://ledgeviewpartners.com/wp-content/uploads/2015/06/Power-BI-10.png"
+                            }
+                        }
+                    }.ToAttachment()
+                    );
+
                 await connector.Conversations.ReplyToActivityAsync(reply);
             }
             else
