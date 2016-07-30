@@ -48,7 +48,7 @@ namespace TREvalBot
 
 
                 Activity reply = activity.CreateReply();
-                reply.Text = "Test";
+                reply.Text = "TechReady 23 session evaluation";
                 reply.Attachments = new List<Attachment>();
                 //reply.Attachments.Add(new Attachment()
                 //{
