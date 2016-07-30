@@ -23,4 +23,4 @@ Param(
 
 $ParametersObject = @{targetSlot  = "$targetSlot"}
 $ResourceName = "$WebAppName/$sourceSlot"
-Invoke-AzureRmResourceAction -ResourceGroupName $ResourceGroupName -ResourceType Microsoft.Web/sites/slots -ResourceName $ResourceName -Action slotsswap -Parameters $ParametersObject -ApiVersion 2015-07-01
+Invoke-AzureRmResourceAction -ResourceGroupName $ResourceGroupName -ResourceType Microsoft.Web/sites/slots -ResourceName $ResourceName -Action slotsswap -Parameters $ParametersObject -ApiVersion 2015-07-01 -Confirm:$false -Force
