@@ -19,7 +19,7 @@ namespace SharedProject
 
             if (emotionResults == null || emotionResults.Count() == 0)
             {
-                throw new Exception("Can't detect face");
+                throw new Exception("Can't detect face.");
             }
 
             return emotionResults;
