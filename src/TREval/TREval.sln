@@ -7,12 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TREvalKiosk", "Client\TREva
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TREvalBot", "TREvalBot\TREvalBot.csproj", "{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProject", "..\..\..\EpicTrApp\source\SharedProject\SharedProject.shproj", "{B71AA219-E266-4B64-90B6-D762CF69A7FA}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\..\..\EpicTrApp\source\SharedProject\SharedProject.projitems*{9f6b9c1b-7311-4a78-80bd-ae4482911825}*SharedItemsImports = 4
-		..\..\..\EpicTrApp\source\SharedProject\SharedProject.projitems*{b71aa219-e266-4b64-90b6-d762cf69a7fa}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
