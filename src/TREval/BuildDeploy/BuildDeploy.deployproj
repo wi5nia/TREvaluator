@@ -31,6 +31,7 @@
     </None>
     <None Include="Scripts\Add-AppServiceSlot.ps1" />
     <None Include="Scripts\Add-KeyVaultSecret.ps1" />
+    <None Include="Scripts\Swap-AppServiceSlot.ps1" />
     <None Include="Scripts\Test-AzureRGKeyVault.ps1" />
     <None Include="Templates\AppService.json" />
     <None Include="Templates\AppService.parameters.json" />
