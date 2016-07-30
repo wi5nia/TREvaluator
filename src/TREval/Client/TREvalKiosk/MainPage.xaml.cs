@@ -19,6 +19,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using SharedProject;
+using TRMobEval;
+
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -97,18 +100,25 @@ namespace TREvalKiosk
             if (_isCaptureMode == true)
             {
                 await ImageCaptureAndDisplay();
-
+                
                 try
                 {
                     float result = await Core.GetAvgEmotionScore(await _file.OpenStreamForReadAsync());
-
                     hapinessRatio.Text = Core.GetEmotionMessage(result);
-
                     previewImage.Visibility = Visibility.Visible;
+                    // Commit to DB
+                    //SessionEval item = new TRMobEval.SessionEval
+                    //{
+                    //    Id = Guid.NewGuid().ToString(),
+                    //    SessionName = "TrDemoSession",
+                    //    SessionScore = result,
+                    //    ScoreDateString = DateTime.Now.ToString()
+                    //};
+                    //await App.MobileService.GetTable<SessionEval>().InsertAsync(item);
                 }
                 catch (Exception ex)
                 {
-                    hapinessRatio.Text = ex.Message;
+                   // hapinessRatio.Text = ex.Message;
                 }
                 finally
                 {

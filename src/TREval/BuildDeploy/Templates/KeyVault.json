@@ -1,0 +1,72 @@
+﻿{
+  "$schema":"https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion":"1.0.0.0",
+  "parameters": {
+    "env": {
+      "defaultValue": "dev",
+      "allowedValues": [
+        "prod",
+        "test",
+        "dev"
+      ],
+      "type": "String"
+    },
+    "keyVaultBaseName": {
+      "defaultValue": "EpicTrApp-KV",
+      "type": "String"
+    },
+    "objectId": {
+      "defaultValue": "00000000-0000-0000-0000-000000000000",
+      "type": "String"
+    },
+    "skuFamily": {
+      "defaultValue": "A",
+      "type": "String"
+    },
+    "skuName": {
+      "defaultValue": "standard",
+      "type": "String"
+    },
+    "tenantId": {
+      "defaultValue": "00000000-0000-0000-0000-000000000000",
+      "type": "String"
+    }
+  },
+  "variables":{
+    "apiVersion":"2015-06-01",
+    "location":"[resourceGroup().location]",
+    "keyVaultName":"[concat(parameters('keyVaultBaseName'),'-',parameters('env'))]"
+  },
+  "resources":[
+    {
+      "type":"Microsoft.KeyVault/vaults",
+      "name":"[variables('keyVaultName')]",
+      "apiVersion":"[variables('apiVersion')]",
+      "location":"[variables('location')]",
+      "properties":{
+        "sku":{
+          "family":"[parameters('skuFamily')]",
+          "name":"[parameters('skuName')]"
+        },
+        "tenantId":"[parameters('tenantId')]",
+        "accessPolicies":[
+          {
+            "tenantId":"[parameters('tenantId')]",
+            "objectId":"[parameters('objectId')]",
+            "permissions":{
+              "keys":[
+                "all"
+              ],
+              "secrets":[
+                "all"
+              ]
+            }
+          }
+        ],
+        "enabledForDeployment":true,
+        "enabledForTemplateDeployment":true,
+        "enabledForVolumeEncryption":true
+      }
+    }
+  ]
+}
