@@ -11,6 +11,8 @@ namespace TRMobEval
         public string SessionName { get; set; }
         public float SessionScore { get; set; }
         public string ScoreDateString { get; set; }
+        
+
 
     }
 }
