@@ -8,13 +8,17 @@ using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Media.Capture;
+using Windows.Media.MediaProperties;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using SharedProject;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -28,6 +32,10 @@ namespace TREvalKiosk
         private MediaCapture _captureManager = null;
         private DeviceInformationCollection availableCameras;
         private int selectedCamera = 0;
+
+        private BitmapImage _bmpImage = null;
+        private StorageFile _file = null;
+        private bool _isCaptureMode = true;
 
         public MainPage()
         {
@@ -83,5 +91,58 @@ namespace TREvalKiosk
                 selectedCamera = 0;
             }
         }
+
+        private async void OnActionClick(object sender, RoutedEventArgs e)
+        {
+            if (_isCaptureMode == true)
+            {
+                await ImageCaptureAndDisplay();
+
+                try
+                {
+                    float result = await Core.GetAvgEmotionScore(await _file.OpenStreamForReadAsync());
+
+                    hapinessRatio.Text = Core.GetEmotionMessage(result);
+
+                    previewImage.Visibility = Visibility.Visible;
+                }
+                catch (Exception ex)
+                {
+                    hapinessRatio.Text = ex.Message;
+                }
+                finally
+                {
+                    actionButton.Content = "RESET";
+                    _isCaptureMode = false;
+                }
+            }
+            else
+            {
+                previewImage.Visibility = Visibility.Collapsed;
+                actionButton.Content = "EVALUATE";
+                hapinessRatio.Text = "";
+                _isCaptureMode = true;
+            }
+        }
+
+
+        private async Task<bool> ImageCaptureAndDisplay()
+        {
+            ImageEncodingProperties imageFormat = ImageEncodingProperties.CreateJpeg();
+
+            // create storage file in local app storage 
+            _file = await ApplicationData.Current.LocalFolder.CreateFileAsync(
+                 $"myPhoto_{Guid.NewGuid()}.jpg",
+                 CreationCollisionOption.GenerateUniqueName);
+
+            // capture to file 
+            await _captureManager.CapturePhotoToStorageFileAsync(imageFormat, _file);
+
+            _bmpImage = new BitmapImage(new Uri(_file.Path));
+            previewImage.Source = _bmpImage;
+
+            return true;
+        }
+
     }
 }
